@@ -30,7 +30,7 @@
 
             html {
                 width: 100vw;
-                height: 100vh;
+                min-height: 100vh;
             }
 
             body {
@@ -47,7 +47,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                max-height: 100%;
                 max-width: var(--breakpoint-md);
             }
 
@@ -74,7 +73,7 @@
                 align-items: center;
                 text-align: center;
                 width: 100%;
-                margin-bottom: 0.8rem;
+                margin: calc(1rem + env(safe-area-inset-top)) 0 0.8rem 0;
             }
 
             #luffy-inner {
@@ -93,16 +92,21 @@
 
             #miscellaneous {
                 display: flex;
+                flex-direction: column;
                 justify-content: start;
                 margin-bottom: 1rem;
-                gap: 1rem;
+                gap: 0.5rem;
             }
 
             .misc-item {
                 display: flex;
                 align-items: center;
                 color: var(--color-slate-600);
-                gap: 1rem;
+                gap: 0.5rem;
+            }
+
+            .misc-item:not(:first-child) {
+                padding-left: 1.5rem;
             }
 
             a {
@@ -116,17 +120,7 @@
             @media screen and (max-width: 640px) {
                 main {
                     max-width: 100%;
-                    padding: 0 0.5rem 0 0.5rem;
-                    overflow: hidden;
-                }
-
-                #miscellaneous {
-                    flex-direction: column;
-                    gap: 0.5rem;
-                }
-
-                .misc-item:not(:first-child) {
-                    padding-left: 1.5rem;
+                    padding: 0.5rem;
                 }
             }
         </style>
