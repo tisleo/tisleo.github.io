@@ -5,6 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>tisleo</title>
         <style>
+            :root {
+                /*
+                    courtesy of tailwind (Neutral 950)
+                    https://tailwindcss.com/docs/colors
+                */
+                --better-black: #0a0a0a;
+            }
+
             * {
                 margin: 0;
                 padding: 0;
@@ -16,7 +24,6 @@
             }
 
             body {
-                background: #ccc;
                 width: 100%;
                 height: 100%;
                 display: flex;
@@ -25,38 +32,38 @@
             }
 
             main {
-                width: fit-content;
-                max-width: 50%;
+                max-width: 640px;
                 display: flex;
                 flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                border: 1px solid var(--better-black);
             }
 
             p {
-                font-size: 24px;
-                color: #525252;
-                width: 100%;
-                letter-spacing: 0.1rem;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
+                color: var(--better-black);
+                text-align: justify;
+            }
+
+            a {
+                width: fit-content;
+            }
+
+            a:focus,
+            a:hover {
+                text-decoration: none;
+            }
+
+            span {
+                font-family: monospace;
+                font-size: 1rem;
             }
 
             @media screen and (max-width: 640px) {
-                p {
-                    font-size: 20px;
-                }
-
                 main {
-                    max-width: 90%;
-                }
-            }
-
-            @media screen and (max-width: 1024px) {
-                p {
-                    font-size: 20px;
-                }
-
-                main {
-                    max-width: 80%;
+                    max-width: 100%;
+                    font-size: 1.5rem;
+                    margin: 0.5rem;
                 }
             }
         </style>
@@ -64,17 +71,11 @@
     <body>
         <main>
             <p>
-                Hi, I'm Leo. I'm studying for a Digital & Technology Solutions degree in the UK. I'm currently gaining
-                experience doing professional AI-driven software development and consultancy.
+                Hi, I'm Leo. I'm a junior fullstack developer at <span>&lt;redacted&gt;</span>. I live in the UK,
+                studying as an apprentice for a Digital Technologies degree. Currently I am gaining experience building,
+                leading and delivering AI software solutions for SMEs.
             </p>
-            <br />
-            <p>I work primarily with Python, JavaScript & TypeScript, and React. I also know C#, Java, and Go.</p>
-            <br />
-            <p>I'm familiar with technologies like Azure, GCP, Git(+Hub), Docker, and Figma.</p>
-            <br />
-            <p>At the moment, I am learning C, computer networks, and ML.</p>
-            <br />
-            <a href="https://github.com/tisleo">GitHub</a>
+            <a href="https://github.com/tisleo" aria-label="Visit my GitHub profile.">GitHub</a>
         </main>
     </body>
 </html>

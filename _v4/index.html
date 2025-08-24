@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tisleo</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                height: 100vh;
+                width: 100vw;
+            }
+
+            body {
+                background: #ccc;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            main {
+                width: fit-content;
+                max-width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            p {
+                font-size: 24px;
+                color: #525252;
+                width: 100%;
+                letter-spacing: 0.1rem;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+            }
+
+            @media screen and (max-width: 640px) {
+                p {
+                    font-size: 20px;
+                }
+
+                main {
+                    max-width: 90%;
+                }
+            }
+
+            @media screen and (max-width: 1024px) {
+                p {
+                    font-size: 20px;
+                }
+
+                main {
+                    max-width: 80%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <p>
+                Hi, I'm Leo. I'm studying for a Digital & Technology Solutions degree in the UK. I'm currently gaining
+                experience doing professional AI-driven software development and consultancy.
+            </p>
+            <br />
+            <p>I work primarily with Python, JavaScript & TypeScript, and React. I also know C#, Java, and Go.</p>
+            <br />
+            <p>I'm familiar with technologies like Azure, GCP, Git(+Hub), Docker, and Figma.</p>
+            <br />
+            <p>At the moment, I am learning C, computer networks, and ML.</p>
+            <br />
+            <a href="https://github.com/tisleo">GitHub</a>
+        </main>
+    </body>
+</html>
